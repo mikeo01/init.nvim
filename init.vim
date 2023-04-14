@@ -44,6 +44,12 @@ call plug#begin()
   " Workflow
   Plug 'easymotion/vim-easymotion'
     map <localleader> <plug>(easymotion-prefix)
+    let g:EasyMotion_smartcase=1
+    let g:EasyMotion_startofline=0
+    map l <plug>(easymotion-lineforward)
+    map j <plug>(easymotion-j)
+    map k <plug>(easymotion-k)
+    map h <plug>(easymotion-linebackward)
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-surround'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } | Plug 'junegunn/fzf.vim'
@@ -138,6 +144,9 @@ nnoremap <leader>\ :Explore<cr>
 nnoremap <leader><space> :noh<cr>
 nnoremap <leader>' :term<cr>
 tnoremap <leader>c <c-\><c-n><cr> 
+
+vnoremap <tab> >><cr>
+vnoremap <s-tab> <<<cr>
 
 " Settings -------------------------------------------------------------
 syntax enable

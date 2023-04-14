@@ -133,6 +133,8 @@ nnoremap <leader>tt :tabe<cr>
 nnoremap <leader>tn :tabn<cr>
 nnoremap <leader>tp :tabp<cr>
 
+imap kj <esc>
+
 nnoremap <space> zo
 nnoremap <BS> zc
 

@@ -22,7 +22,6 @@ call plug#begin()
   Plug 'mhinz/vim-startify'
 
   " Themes
-  Plug 'aonemd/quietlight.vim'
   Plug 'ellisonleao/gruvbox.nvim'
 
   " UI improvements
@@ -105,12 +104,17 @@ call plug#begin()
     nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
     nnoremap <silent> <space>s :<C-u>CocList -I symbols<cr>
     nnoremap <silent> <localleader>k :call ShowDocumentation()<cr>
+    nnoremap <silent>? :call CocAction('diagnosticInfo')<cr>
     let g:coc_global_extensions = ["@yaegassy/coc-tailwindcss3", "coc-tsserver", "coc-vetur", "coc-eslint", "coc-clojure", "coc-markdownlint", "coc-html", "coc-tsserver", "coc-elixir", "coc-erlang_ls", "coc-json"]
     let g:coc_user_config = {
       \ "coc.source.iced.enable": "true",
       \ "eslint.autoFixOnSave": "true",
       \ "codeLens.enable": "true",
-      \ "colors.enable": "true"
+      \ "colors.enable": "true",
+      \ "diagnostic.checkCurrentLine": "true",
+      \ "diagnostic.virtualText": "true",
+      \ "diagnostic.virtualTextCurrentLineOnly": "false",
+      \ "diagnostic.enableMessage": "jump",
     \}
     autocmd CursorHold * silent call CocActionAsync('highlight')
     autocmd BufWritePre *.ts,*.js,*.tsx,*.js,*.cljs,*.clj,*.php :silent call CocAction('runCommand', 'editor.action.organizeImport')

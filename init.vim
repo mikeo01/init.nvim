@@ -58,11 +58,13 @@ call plug#begin()
   Plug 'tpope/vim-surround'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } | Plug 'junegunn/fzf.vim'
     let $BAT_THEME = 'OneHalfLight'
-    nnoremap <leader>p :Files<cr>
+    nnoremap <leader>p :GFiles<cr>
     nnoremap <leader>b :Buffers<cr>
     nnoremap <leader>gf :Rg<cr>
-    nnoremap <leader>bf :BLines<cr>
+    nnoremap <space>/ :BLines<cr>
     nnoremap <leader>af :Lines<cr>
+    nnoremap <leader>m :Maps<cr>
+    nnoremap M :Marks<cr>
   Plug 'tpope/vim-fugitive'
   Plug 'itchyny/lightline.vim'
     let g:lightline = {
@@ -143,10 +145,7 @@ call plug#end()
 nnoremap <leader>w :w<cr>
 
 " Buffers
-nnoremap <leader>bn :bn<cr>
-nnoremap <leader>bp :bp<cr>
 nnoremap <leader>q :bd<cr>
-nnoremap <leader>b :ls<cr>:b<space>
 
 " Tabs
 nnoremap <S-C-left> :tabp<cr>

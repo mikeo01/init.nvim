@@ -115,7 +115,7 @@ call plug#begin()
     nmap <leader>f :call CocActionAsync('format')<cr>
     nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
     nnoremap <silent> <space>s :<C-u>CocList -I symbols<cr>
-    nnoremap <silent> K :call ShowDocumentation()<cr>
+    nnoremap <silent> <space>k :call ShowDocumentation()<cr>
     nnoremap <silent><leader>d :call CocAction('diagnosticInfo')<cr>
     let g:coc_global_extensions = ["@yaegassy/coc-tailwindcss3", "coc-tsserver", "coc-vetur", "coc-eslint", "coc-clojure", "coc-markdownlint", "coc-html", "coc-tsserver", "coc-elixir", "coc-erlang_ls", "coc-json"]
     let g:coc_user_config = {
@@ -171,7 +171,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-up> :res -1<cr>
-nnoremap <C-up> :res -1<cr>
+nnoremap <C-down> :res +1<cr>
 nnoremap <C-right> <C-W>> +<cr>
 nnoremap <C-left> <C-W>< -<cr>
 

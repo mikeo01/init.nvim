@@ -47,6 +47,9 @@ call plug#begin()
     map <localleader> <plug>(easymotion-prefix)
     let g:EasyMotion_smartcase=1
     let g:EasyMotion_startofline=0
+    nmap s <plug>(easymotion-s)
+    map <localleader>f <plug>(easymotion-bd-f)
+    map <localleader>f <plug>(easymotion-overwin-f)
     map <localleader>l <plug>(easymotion-lineforward)
     map <localleader>j <plug>(easymotion-j)
     map <localleader>k <plug>(easymotion-k)
@@ -117,6 +120,8 @@ call plug#begin()
     let g:coc_global_extensions = ["@yaegassy/coc-tailwindcss3", "coc-tsserver", "coc-vetur", "coc-eslint", "coc-clojure", "coc-markdownlint", "coc-html", "coc-tsserver", "coc-elixir", "coc-erlang_ls", "coc-json"]
     let g:coc_user_config = {
       \ "coc.source.iced.enable": "true",
+      \ "coc.preferences.formatOnType": "true",
+      \ "coc.preferences.formatOnSaveFiletypes": ["vue", "typescript", "javascript", "php", "clojure"],
       \ "eslint.autoFixOnSave": "true",
       \ "codeLens.enable": "true",
       \ "colors.enable": "true",
@@ -144,11 +149,10 @@ nnoremap <leader>q :bd<cr>
 nnoremap <leader>b :ls<cr>:b<space>
 
 " Tabs
-nnoremap <leader>tt :tabe<cr>
-nnoremap <leader>tn :tabn<cr>
-nnoremap <leader>tp :tabp<cr>
-
-imap kj <esc>
+nnoremap <S-C-left> :tabp<cr>
+nnoremap <S-C-right> :tabn<cr>
+nnoremap <S-C-down> :tabe<cr>
+nnoremap <S-C-up> :tabc<cr>
 
 " Folding
 nnoremap <space> zo
@@ -158,8 +162,10 @@ nnoremap <BS> zc
 nnoremap <C-a> Gvgg
 
 " Window management
-nnoremap <leader>hs :split<cr>
-nnoremap <leader>vs :vsplit<cr>
+nnoremap <S-k> :above split<cr>
+nnoremap <S-j> :below split<cr>
+nnoremap <S-h> :vs<cr>
+nnoremap <S-l> :botright vs<cr>
 nnoremap <C-h> <C-w>h 
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k

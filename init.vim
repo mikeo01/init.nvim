@@ -23,6 +23,8 @@ call plug#begin()
 
   " Themes
   Plug 'ellisonleao/gruvbox.nvim'
+  Plug 'aonemd/quietlight.vim'
+  Plug 'NLKNguyen/papercolor-theme'
 
   " UI improvements
   Plug 'ap/vim-css-color'
@@ -73,8 +75,15 @@ call plug#begin()
   Plug 'tpope/vim-commentary'
   Plug 'folke/which-key.nvim'
   Plug 'chrisgrieser/nvim-early-retirement'
-        
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-tree/nvim-web-devicons'
+  Plug 'MunifTanjim/nui.nvim'
+  Plug 'nvim-neo-tree/neo-tree.nvim'
+    nnoremap <leader>\ :Neotree filesystem reveal right toggle<cr>
+
   " Languages & sytnax
+  Plug 'mfussenegger/nvim-dap'
+  Plug 'rcarriga/nvim-dap-ui'
   Plug 'jwalton512/vim-blade', { 'for': 'php' }
   Plug 'peitalin/vim-jsx-typescript', { 'for': 'ts' }
   Plug 'stephenway/postcss.vim', { 'for': ['vue', 'css', 'sass', 'scss'] }
@@ -128,29 +137,45 @@ call plug#end()
 " Key mappings ---------------------------------------------------------
 nnoremap <leader>w :w<cr>
 
+" Buffers
 nnoremap <leader>bn :bn<cr>
 nnoremap <leader>bp :bp<cr>
 nnoremap <leader>q :bd<cr>
 nnoremap <leader>b :ls<cr>:b<space>
 
+" Tabs
 nnoremap <leader>tt :tabe<cr>
 nnoremap <leader>tn :tabn<cr>
 nnoremap <leader>tp :tabp<cr>
 
 imap kj <esc>
 
+" Folding
 nnoremap <space> zo
 nnoremap <BS> zc
 
+" Select all
+nnoremap <C-a> Gvgg
+
+" Window management
 nnoremap <leader>hs :split<cr>
 nnoremap <leader>vs :vsplit<cr>
+nnoremap <C-h> <C-w>h 
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+nnoremap <C-up> :res -1<cr>
+nnoremap <C-up> :res -1<cr>
+nnoremap <C-right> <C-W>> +<cr>
+nnoremap <C-left> <C-W>< -<cr>
 
-nnoremap <leader>\ :Explore<cr>
-
+" Misc
 nnoremap <leader><space> :noh<cr>
 nnoremap <leader>' :term<cr>
 tnoremap <leader>c <c-\><c-n><cr> 
+nnoremap p P
 
+" Indention
 vnoremap <tab> >><cr>
 vnoremap <s-tab> <<<cr>
 
@@ -199,4 +224,5 @@ if plugInstalled
   lua require('indent_blankline').setup()
   lua require('mini.indentscope').setup({ draw = { delay = 200 }, options = { try_as_border = true }, symbol = '│'})
   lua require("early-retirement").setup() 
+  lua require("dapui").setup()
 endif

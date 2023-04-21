@@ -1,4 +1,4 @@
-let $BAT_THEME='OneHalfLight'
+let $BAT_THEME='gruvbox-light'
 
 " Clojure
 let g:iced_enable_default_key_mappings=v:true

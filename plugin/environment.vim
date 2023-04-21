@@ -23,6 +23,7 @@ let g:coc_user_config = {
   \ "diagnostic.enableMessage": "jump",
 \}
 
+set updatetime=500
 set tabstop=2
 set nowrap
 set copyindent

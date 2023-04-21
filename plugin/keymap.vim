@@ -39,7 +39,7 @@ nnoremap <leader>ot :term<CR>
 tnoremap <localleader>c <C-\><C-n><CR>
 
 " [Files, Fuzzy Finding]
-nnoremap <leader><leader> :GFiles<CR>
+nnoremap <leader>p :GFiles<CR>
 nnoremap <leader>. :Files<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>g :Rg<CR>

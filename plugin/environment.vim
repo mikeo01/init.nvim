@@ -2,6 +2,7 @@ let $BAT_THEME='gruvbox-light'
 
 " Clojure
 let g:iced_enable_default_key_mappings=v:true
+let g:iced_default_key_mapping_leader='<localleader>'
 
 " Easy motion
 let g:Easymotion_do_mapping=0

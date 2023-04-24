@@ -48,6 +48,7 @@ nnoremap ? :BLines<CR>
 nnoremap M :Maps<CR>
 nnoremap \ :Neotree filesystem reveal left toggle<CR>
 nmap s <Plug>(easymotion-s)
+vnoremap s <Plug>(easymotion-s)
 nmap <leader>j <PLug>(easymotion-j)
 nmap <leader>k <PLug>(easymotion-k)
 map ¬ <Plug>(easymotion-prefix) " Do nothing

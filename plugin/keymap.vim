@@ -7,6 +7,7 @@ nnoremap <Esc><Esc> :noh<CR>
 " [Buffers]
 nnoremap <leader>w :w<CR>
 nnoremap <leader>fs :w<CR>
+inoremap <C-v> <C-O>p<CR>
 
 " [Tabs]
 nnoremap <S-C-left> :tabp<CR>

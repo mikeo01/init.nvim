@@ -72,4 +72,5 @@ call plug#begin()
   Plug 'peitalin/vim-jsx-typescript', { 'for': 'ts' }
   Plug 'stephenway/postcss.vim', { 'for': ['vue', 'css', 'sass', 'scss'] }
   Plug 'leafOfTree/vim-vue-plugin', { 'for': 'vue' }
+  Plug 'instant-markdown/vim-instant-markdown', { 'for': 'markdown', 'do': 'yarn install' }
 call plug#end()

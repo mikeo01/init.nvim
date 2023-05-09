@@ -53,6 +53,8 @@ nmap s <Plug>(easymotion-s)
 vnoremap s <Plug>(easymotion-s)
 nmap <leader>j <PLug>(easymotion-j)
 nmap <leader>k <PLug>(easymotion-k)
+nmap f <Plug>(easymotion-lineforward)
+nmap F <Plug>(easymotion-linebackward)
 map ¬ <Plug>(easymotion-prefix) " Do nothing
 
 " [LSP]

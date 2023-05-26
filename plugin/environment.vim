@@ -46,4 +46,4 @@ set background=light
 set clipboard=unnamedplus
 set termguicolors
 set mouse=a
-silent! colorscheme gruvbox
+silent! colorscheme solarized

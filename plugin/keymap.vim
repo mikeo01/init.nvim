@@ -5,7 +5,6 @@ let maplocalleader= ','
 nnoremap <Esc><Esc> :noh<CR>
 
 " [Buffers]
-nnoremap p P
 nnoremap <leader>w :w<CR>
 nnoremap <leader>fs :w<CR>
 inoremap <C-v> <C-O>p<CR>

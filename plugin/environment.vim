@@ -1,5 +1,11 @@
 let $BAT_THEME='gruvbox-light'
 
+" Solarized
+let g:solarized_italic_comments=v:true
+let g:solarized_italic_keywords=v:true
+let g:solarized_italic_functions=v:true
+let g:solarized_italic_variables=v:true
+
 " Clojure
 let g:iced_enable_default_key_mappings=v:true
 let g:iced_default_key_mapping_leader='<localleader>'
@@ -39,7 +45,7 @@ set softtabstop=0
 set cursorcolumn
 set cursorline
 set relativenumber
-set signcolumn=yes
+set signcolumn=number
 set foldmethod=syntax
 set foldlevel=999
 set background=light

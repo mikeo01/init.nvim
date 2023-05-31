@@ -33,6 +33,13 @@ let g:coc_user_config = {
   \ "diagnostic.virtualTextCurrentLineOnly": "false",
   \ "diagnostic.enableMessage": "jump",
 \}
+highlight CocFloating ctermbg=black ctermfg=white
+highlight CocErrorFloat ctermbg=black ctermfg=white
+highlight CocWarningFloat ctermbg=black ctermfg=white
+highlight CocVirtualText ctermbg=black ctermfg=white
+highlight CocErrorVirtualText ctermbg=black ctermfg=white
+highlight CocWarningVirtualText ctermbg=black ctermfg=white
+
 
 set updatetime=500
 set tabstop=2
@@ -52,4 +59,4 @@ set background=light
 set clipboard=unnamedplus
 set termguicolors
 set mouse=a
-silent! colorscheme solarized
+silent! colorscheme NeoSolarized

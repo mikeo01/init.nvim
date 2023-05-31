@@ -18,7 +18,7 @@ endif
 
 call plug#begin()
  " [Themes"]
- Plug 'ellisonleao/gruvbox.nvim' | Plug 'aonemd/quietlight.vim' | Plug 'NLKNguyen/papercolor-theme' | Plug '/shaunsingh/solarized.nvim'
+ Plug 'ellisonleao/gruvbox.nvim' | Plug 'aonemd/quietlight.vim' | Plug 'NLKNguyen/papercolor-theme' | Plug 'overcache/NeoSolarized'
  
  " [Configurations]
  Plug 'neovim/nvim-lspconfig' " LSP configuration

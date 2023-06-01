@@ -1,4 +1,4 @@
-let $BAT_THEME='gruvbox-light'
+let $BAT_THEME='Solarized (light)'
 
 " Solarized
 let g:solarized_italic_comments=v:true

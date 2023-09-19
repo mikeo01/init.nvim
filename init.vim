@@ -73,4 +73,5 @@ call plug#begin()
   Plug 'stephenway/postcss.vim', { 'for': ['vue', 'css', 'sass', 'scss'] }
   Plug 'leafOfTree/vim-vue-plugin', { 'for': 'vue' }
   Plug 'instant-markdown/vim-instant-markdown', { 'for': 'markdown', 'do': 'yarn install' }
+  Plug 'bakpakin/fennel.vim'
 call plug#end()

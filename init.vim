@@ -66,6 +66,8 @@ call plug#begin()
  Plug 'neoclide/coc.nvim', { 'branch': 'release' }
  Plug 'nvim-treesitter/nvim-treesitter' " Treesitter (syntax parsing)
  Plug 'liquidz/vim-iced', { 'for': 'clojure' } | Plug 'liquidz/vim-iced-coc-source', {'for': 'clojure'} | Plug 'guns/vim-sexp'
+ Plug 'Olical/aniseed', { 'for': 'fennel' }
+ Plug 'Olical/conjure', { 'for': 'fennel' }
 
  " [Syntax]
   Plug 'jwalton512/vim-blade', { 'for': 'php' }

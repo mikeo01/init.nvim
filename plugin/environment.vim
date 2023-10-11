@@ -18,6 +18,7 @@ let g:EasyMotion_startofline=0
 " Markdown
 let g:instant_markdown_autostart=1
 let g:instant_markdown_autoscroll=1
+let g:instant_markdown_mermaid=1
 
 " Coc
 let g:coc_global_extensions = ["@yaegassy/coc-tailwindcss3", "coc-tsserver", "coc-vetur", "coc-eslint", "coc-clojure", "coc-markdownlint", "coc-html", "coc-tsserver", "coc-elixir", "coc-erlang_ls", "coc-json"]

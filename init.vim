@@ -43,7 +43,7 @@ call plug#begin()
  " [Buffer]
  Plug 'tpope/vim-sleuth' " Adjust shifts & tabs based on file
  Plug 'junegunn/rainbow_parentheses.vim', { 'for': 'clojure' } " Easily see matching bracket pairs
- Plug 'echasnovski/mini.indentscope' | Plug 'lukas-reineke/indent-blankline.nvim' " Indent guidelines
+ Plug 'echasnovski/mini.indentscope' | Plug 'lukas-reineke/indent-blankline.nvim', { 'tag': 'v2.20.8' } " Indent guidelines
  Plug 'ap/vim-css-color' " Colour highlighing
  Plug 'RRethy/vim-illuminate' " Highight current word under cursor
  Plug 'chrisgrieser/nvim-early-retirement' " Unload buffers after x automatically

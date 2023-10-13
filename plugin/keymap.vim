@@ -80,7 +80,7 @@ nmap <leader>cl <Plug>(coc-codelens-action)
 nmap <leader>f :call CocActionAsync('format')<cr>
 nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
 nnoremap <silent> <space>s :<C-u>CocList -I symbols<cr>
-nnoremap <silent> <space>k :call ShowDocumentation()<cr>
+nnoremap <silent> K :call ShowDocumentation()<cr>
 nnoremap <silent><leader>d :call CocAction('diagnosticInfo')<cr>
 autocmd CursorHold * silent call CocActionAsync('highlight')
 autocmd BufWritePre *.ts,*.js,*.tsx,*.js,*.cljs,*.clj,*.php :silent call CocAction('runCommand', 'editor.action.organizeImport')

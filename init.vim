@@ -46,7 +46,7 @@ call plug#begin()
  Plug 'echasnovski/mini.indentscope' | Plug 'lukas-reineke/indent-blankline.nvim', { 'tag': 'v2.20.8' } " Indent guidelines
  Plug 'ap/vim-css-color' " Colour highlighing
  Plug 'RRethy/vim-illuminate' " Highight current word under cursor
- Plug 'chrisgrieser/nvim-early-retirement' " Unload buffers after x automatically
+ Plug 'chrisgrieser/nvim-early-retirement' " Unload unused buffers
 
  " [Marks]
  Plug 'chentoast/marks.nvim' " Easier marks

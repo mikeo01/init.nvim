@@ -1,6 +1,6 @@
 lua <<EOF
   require("early-retirement").setup({
-    retirementAgeMins = 1,
+    retirementAgeMins = 10,
     minimumBufferNum = 6 -- allow me to work on multiple files on split view
   })
   require('which-key').setup()

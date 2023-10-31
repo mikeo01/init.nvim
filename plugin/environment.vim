@@ -42,7 +42,7 @@ highlight CocErrorVirtualText ctermbg=black ctermfg=white
 highlight CocWarningVirtualText ctermbg=black ctermfg=white
 
 
-set updatetime=500
+set updatetime=1000
 set tabstop=2
 set nowrap
 set copyindent

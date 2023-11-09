@@ -12,13 +12,14 @@ inoremap <C-v> <C-O>p<CR>
 " [Tabs]
 nnoremap <S-C-left> :tabp<CR>
 nnoremap <S-C-right> :tabn<CR>
-nnoremap <S-C-down> :tabe<CR>
-nnoremap <S-C-up> :tabc<CR>
+nnoremap <S-C-down> :tabc<CR>
+nnoremap <S-C-up> :tabe<CR>
 
 " [Text]
 nnoremap <C-a> Gvgg
 vnoremap <TAB> >><CR>
 vnoremap <S-TAB> <<<CR>
+nnoremap <localleader>m :match search<Space>
 
 " [Window management]
 nnoremap <S-k> :above split<CR>

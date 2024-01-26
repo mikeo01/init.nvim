@@ -85,4 +85,3 @@ nnoremap <silent> K :call ShowDocumentation()<cr>
 nnoremap <silent><leader>d :call CocAction('diagnosticInfo')<cr>
 autocmd CursorHold * silent call CocActionAsync('highlight')
 autocmd BufWritePre *.ts,*.js,*.tsx,*.js,*.cljs,*.clj,*.php :silent call CocAction('runCommand', 'editor.action.organizeImport')
-

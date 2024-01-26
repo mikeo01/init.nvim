@@ -21,7 +21,7 @@ let g:instant_markdown_autoscroll=1
 let g:instant_markdown_mermaid=1
 
 " Coc
-let g:coc_global_extensions = ["@yaegassy/coc-tailwindcss3", "coc-tsserver", "coc-vetur", "coc-eslint", "coc-clojure", "coc-markdownlint", "coc-html", "coc-tsserver", "coc-elixir", "coc-erlang_ls", "coc-json"]
+let g:coc_global_extensions = ["@yaegassy/coc-tailwindcss3", "coc-emoji", "coc-tsserver", "coc-vetur", "coc-eslint", "coc-clojure", "coc-markdownlint", "coc-html", "coc-tsserver", "coc-elixir", "coc-erlang_ls", "coc-json"]
 let g:coc_user_config = {
   \ "coc.source.iced.enable": "true",
   \ "coc.preferences.formatOnType": "true",
@@ -33,6 +33,10 @@ let g:coc_user_config = {
   \ "diagnostic.virtualText": "true",
   \ "diagnostic.virtualTextCurrentLineOnly": "false",
   \ "diagnostic.enableMessage": "jump",
+  \ "tailwindCSS.emmetCompletions": "true",
+  \ "tailwindCSS.includeLanguages": {"js": "html", "clojure": "html"},
+  \ "tailwindCSS.headwind.runOnSave": "true",
+  \ "coc.source.emoji.filetypes": ["vue", "typescript", "javascript", "clojure", "html", "markdown"]
 \}
 highlight CocFloating ctermbg=black ctermfg=white
 highlight CocErrorFloat ctermbg=black ctermfg=white

@@ -21,11 +21,11 @@ let g:instant_markdown_autoscroll=1
 let g:instant_markdown_mermaid=1
 
 " Coc
-let g:coc_global_extensions = ["@yaegassy/coc-tailwindcss3", "coc-emoji", "coc-tsserver", "coc-vetur", "coc-eslint", "coc-clojure", "coc-markdownlint", "coc-html", "coc-tsserver", "coc-elixir", "coc-erlang_ls", "coc-json"]
+let g:coc_global_extensions = ["@yaegassy/coc-tailwindcss3", "coc-emoji", "coc-tsserver", "coc-vetur", "coc-eslint", "coc-prettier", "coc-clojure", "coc-markdownlint", "coc-html", "coc-tsserver", "coc-elixir", "coc-erlang_ls", "coc-json"]
 let g:coc_user_config = {
   \ "coc.source.iced.enable": "true",
   \ "coc.preferences.formatOnType": "true",
-  \ "coc.preferences.formatOnSaveFiletypes": ["vue", "typescript", "javascript", "php", "clojure"],
+  \ "coc.preferences.formatOnSaveFiletypes": ["vue", "typescript", "javascript", "css", "markdown", "php", "clojure"],
   \ "eslint.autoFixOnSave": "true",
   \ "codeLens.enable": "true",
   \ "colors.enable": "true",

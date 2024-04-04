@@ -6,6 +6,7 @@ lua <<EOF
   require('which-key').setup()
   require("marks").setup()
   require("gitsigns").setup()
+  require("textcase").setup()
   require('mini.indentscope').setup({
     draw = { delay = 200 },
     options = { try_as_border = true },

@@ -35,6 +35,7 @@ call plug#begin()
  Plug 'tpope/vim-surround' | Plug 'tpope/vim-ragtag' " Brackets, parentheses, quotes
  Plug 'tpope/vim-unimpaired' " Work & move with brackets
  Plug 'tpope/vim-commentary' " Comments
+ Plug 'johmsalas/text-case.nvim' " Casing
 
  " [Shells]
  Plug 'tpope/vim-fugitive' " Git (:GCommit etc)

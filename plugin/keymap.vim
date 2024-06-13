@@ -6,6 +6,7 @@ nnoremap <Esc><Esc> :noh<CR>
 
 " [Buffers]
 nnoremap <leader>w :w<CR>
+nnoremap <leader>wq :wq<CR>
 nnoremap <leader>fs :w<CR>
 nnoremap <leader>fsa :wa<CR>
 inoremap <C-v> <C-O>p<CR>

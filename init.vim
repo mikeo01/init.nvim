@@ -30,12 +30,13 @@ call plug#begin()
  Plug 'tpope/vim-repeat' " Sensible repeats
 
  " [Text-objects]
- Plug 'tpope/vim-endwise' " Auto pairs
+ Plug 'windwp/nvim-autopairs' " Auto pairs
  Plug 'tpope/vim-abolish' " Search & replace abbrvs, coercion
  Plug 'tpope/vim-surround' | Plug 'tpope/vim-ragtag' " Brackets, parentheses, quotes
  Plug 'tpope/vim-unimpaired' " Work & move with brackets
  Plug 'tpope/vim-commentary' " Comments
  Plug 'johmsalas/text-case.nvim' " Casing
+ Plug 'mattn/emmet-vim' " Emmet
 
  " [Shells]
  Plug 'tpope/vim-fugitive' " Git (:GCommit etc)

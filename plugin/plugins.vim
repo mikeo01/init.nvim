@@ -3,6 +3,7 @@ lua <<EOF
     retirementAgeMins = 10,
     minimumBufferNum = 6 -- allow me to work on multiple files on split view
   })
+  require("nvim-autopairs").setup()
   require('which-key').setup()
   require("marks").setup()
   require("gitsigns").setup()

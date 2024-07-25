@@ -36,6 +36,7 @@ call plug#begin()
  Plug 'tpope/vim-unimpaired' " Work & move with brackets
  Plug 'tpope/vim-commentary' " Comments
  Plug 'johmsalas/text-case.nvim' " Casing
+ Plug 'mattn/emmet-vim' " Emmet
 
  " [Shells]
  Plug 'tpope/vim-fugitive' " Git (:GCommit etc)

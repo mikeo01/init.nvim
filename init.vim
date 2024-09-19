@@ -21,8 +21,6 @@ call plug#begin()
  Plug 'ellisonleao/gruvbox.nvim' | Plug 'aonemd/quietlight.vim' | Plug 'NLKNguyen/papercolor-theme' | Plug 'overcache/NeoSolarized'
  
  " [Configurations]
- Plug 'neovim/nvim-lspconfig' " LSP configuration
- Plug 'williamboman/mason-lspconfig.nvim'
  Plug 'tpope/vim-sensible' " Sensible defaults
  Plug 'folke/which-key.nvim' " Finding key maps like doom emacs does
 
@@ -67,9 +65,9 @@ call plug#begin()
  " [LSP]
  Plug 'neoclide/coc.nvim', { 'branch': 'release' }
  Plug 'nvim-treesitter/nvim-treesitter' " Treesitter (syntax parsing)
- Plug 'liquidz/vim-iced', { 'for': 'clojure' } | Plug 'liquidz/vim-iced-coc-source', {'for': 'clojure'} | Plug 'guns/vim-sexp'
- Plug 'Olical/aniseed', { 'for': 'fennel' }
- Plug 'Olical/conjure', { 'for': 'fennel' }
+ Plug 'tpope/vim-dispatch' | Plug 'clojure-vim/vim-jack-in' | Plug 'radenling/vim-dispatch-neovim'
+ Plug 'Olical/aniseed'
+ Plug 'Olical/conjure'
 
  " [Syntax]
   Plug 'jwalton512/vim-blade', { 'for': 'php' }

@@ -17,13 +17,16 @@ let g:instant_markdown_autoscroll=1
 let g:instant_markdown_mermaid=1
 
 " Coc
-let g:coc_global_extensions = ["@yaegassy/coc-tailwindcss3", "coc-vetur", "coc-eslint", "coc-prettier", "coc-markdownlint", "coc-html", "coc-tsserver", "coc-json"]
+let g:coc_global_extensions = ["@yaegassy/coc-tailwindcss3", "coc-vetur", "coc-eslint", "coc-prettier", "coc-markdownlint", "coc-html", "coc-tsserver", "coc-json", "coc-conjure"]
 highlight CocFloating ctermbg=black ctermfg=white
 highlight CocErrorFloat ctermbg=black ctermfg=white
 highlight CocWarningFloat ctermbg=black ctermfg=white
 highlight CocVirtualText ctermbg=black ctermfg=white
 highlight CocErrorVirtualText ctermbg=black ctermfg=white
 highlight CocWarningVirtualText ctermbg=black ctermfg=white
+
+" Conjure
+let g:conjure#filetype#fennel = "conjure.client.fennel.stdio"
 
 
 set updatetime=1000

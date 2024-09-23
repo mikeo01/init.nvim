@@ -27,6 +27,7 @@ highlight CocWarningVirtualText ctermbg=black ctermfg=white
 
 " Conjure
 let g:conjure#filetype#fennel = "conjure.client.fennel.stdio"
+let g:conjure#client#fennel#stdio#command = "love ."
 
 
 set updatetime=1000

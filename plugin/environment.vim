@@ -29,6 +29,9 @@ highlight CocWarningVirtualText ctermbg=black ctermfg=white
 let g:conjure#filetype#fennel = "conjure.client.fennel.stdio"
 let g:conjure#client#fennel#stdio#command = "love ."
 
+" Paredit
+let g:sexp_filetypes = "clojure,fennel,janet"
+
 
 set updatetime=1000
 set tabstop=2

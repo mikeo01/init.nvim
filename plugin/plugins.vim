@@ -3,19 +3,20 @@ lua <<EOF
     retirementAgeMins = 10,
     minimumBufferNum = 6 -- allow me to work on multiple files on split view
   })
-  require('which-key').setup()
+  require("which-key").setup()
   require("marks").setup()
   require("gitsigns").setup()
   require("textcase").setup()
-  require('mini.indentscope').setup({
+  require("mini.indentscope").setup({
     draw = { delay = 200 },
     options = { try_as_border = true },
-    symbol = '│'
+    symbol = "│"
   })
-  require("indent_blankline").setup {
+  require("indent_blankline").setup({
     show_current_context = true,
     show_current_context_start = true,
-  }
+    filetype_exclude = {"lisp", "clojure", "fennel"}
+  })
 
   -- Treesitter
   require("nvim-treesitter.configs").setup({
@@ -26,11 +27,12 @@ lua <<EOF
     auto_install = true,
   })
 
-  require('lualine').setup {
+  require("lualine").setup({
     options = {
-      theme = 'codedark',
-      component_separators = '',
-      section_separators = { left = '', right = '' },
+      theme = "codedark",
+      component_separators = "",
+      section_separators = { left = "", right = "" },
     },
-  }
+  })
+
 EOF

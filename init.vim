@@ -35,6 +35,7 @@ call plug#begin()
  Plug 'tpope/vim-commentary' " Comments
  Plug 'johmsalas/text-case.nvim' " Casing
  Plug 'mattn/emmet-vim' " Emmet
+ Plug 'guns/vim-sexp' | Plug 'tpope/vim-sexp-mappings-for-regular-people' " Paredit
 
  " [Shells]
  Plug 'tpope/vim-fugitive' " Git (:GCommit etc)

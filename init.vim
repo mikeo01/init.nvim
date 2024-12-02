@@ -62,6 +62,8 @@ call plug#begin()
  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } | Plug 'junegunn/fzf.vim'
  Plug 'nvim-neo-tree/neo-tree.nvim' | Plug 'MunifTanjim/nui.nvim' | Plug 'nvim-tree/nvim-web-devicons' | Plug 'nvim-lua/plenary.nvim' " Neotree
  Plug 'easymotion/vim-easymotion'
+ Plug 'kevinhwang91/nvim-bqf'
+ Plug 'mhinz/vim-grepper'
 
  " [LSP]
  Plug 'neoclide/coc.nvim', { 'branch': 'release' }

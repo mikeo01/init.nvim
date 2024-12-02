@@ -47,6 +47,7 @@ nnoremap <leader>p :GFiles<CR>
 nnoremap <leader>. :Files<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>g :Rg<CR>
+nnoremap <leader>G :Grepper<CR>
 nnoremap <leader>m :Marks<CR>
 nnoremap ? :BLines<CR>
 nnoremap M :Maps<CR>

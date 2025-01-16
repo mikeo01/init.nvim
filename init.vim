@@ -79,4 +79,6 @@ call plug#begin()
   Plug 'leafOfTree/vim-vue-plugin', { 'for': 'vue' }
   Plug 'instant-markdown/vim-instant-markdown', { 'for': 'markdown', 'do': 'yarn install' }
   Plug 'bakpakin/fennel.vim'
+  Plug 'leafOfTree/vim-svelte-plugin'
+  Plug 'wuelnerdotexe/vim-astro'
 call plug#end()

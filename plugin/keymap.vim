@@ -87,3 +87,9 @@ nnoremap <silent> K :call ShowDocumentation()<cr>
 nnoremap <silent><leader>d :call CocAction('diagnosticInfo')<cr>
 autocmd CursorHold * silent call CocActionAsync('highlight')
 autocmd BufWritePre *.ts,*.js,*.tsx,*.js,*.cljs,*.clj,*.php :silent call CocAction('runCommand', 'editor.action.organizeImport')
+
+" [Jester]
+nmap <localleader>jc :lua require"jester".run()<CR>
+nmap <localleader>jdc :lua require"jester".debug()<CR>
+nmap <localleader>jf :lua require"jester".run_file()<CR>
+nmap <localleader>jdf :lua require"jester".debug_file()<CR>

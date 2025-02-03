@@ -1,6 +1,6 @@
 {
   "coc.preferences.formatOnSave": true,
-  "eslint.autoFixOnSave": true,
+  "eslint.autoFixOnSave": false,
   "codeLens.enable": true,
   "colors.enable": true,
   "diagnostic.checkCurrentLine": true,

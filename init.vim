@@ -81,6 +81,4 @@ call plug#begin()
   Plug 'bakpakin/fennel.vim'
   Plug 'leafOfTree/vim-svelte-plugin'
   Plug 'wuelnerdotexe/vim-astro'
-  Plug 'David-Kunz/jester'
-
 call plug#end()

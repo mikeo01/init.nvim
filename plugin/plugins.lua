@@ -1,4 +1,3 @@
-lua <<EOF
   require("early-retirement").setup({
     retirementAgeMins = 10,
     minimumBufferNum = 6 -- allow me to work on multiple files on split view
@@ -21,7 +20,7 @@ lua <<EOF
   -- Treesitter
   require("nvim-treesitter.configs").setup({
     -- Ensure these are installed at all times
-    ensure_installed = { "typescript", "vue", "php", "clojure" },
+    ensure_installed = { "javascript", "tsx", "typescript", "vue", "php", "clojure" },
 
     -- Automatically install parsers
     auto_install = true,
@@ -34,5 +33,3 @@ lua <<EOF
       section_separators = { left = "", right = "" },
     },
   })
-
-EOF

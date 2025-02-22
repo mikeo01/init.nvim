@@ -1,0 +1,11 @@
+-- Diagnostics on the float window
+vim.api.nvim_set_keymap('n', '<space>d', '<CMD>lua vim.diagnostic.open_float()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '[d', '<CMD>lua vim.diagnostic.goto_prev()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', ']d', '<CMD>lua vim.diagnostic.goto_next()<CR>', { noremap = true, silent = true })
+
+-- Example keybinding to run tests
+vim.api.nvim_set_keymap('n', '<leader>t', '<CMD>lua require("neotest").run.run()<CR>', { noremap = true, silent = true })
+
+vm.cmd([[
+  autocmd BufWritePre *.ts,*.js,*.tsx,*.jsx lua vim.lsp.buf.formatting_sync()
+]])

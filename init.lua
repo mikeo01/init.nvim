@@ -278,7 +278,8 @@ require("lazy").setup({
         "nvim-neotest/nvim-nio",
         "nvim-neotest/neotest-jest",
         "jfpedroza/neotest-elixir",
-        "olimorris/neotest-phpunit"
+        "olimorris/neotest-phpunit",
+        "mfussenegger/nvim-dap"
       },
       config = function ()
         require("neotest").setup({
@@ -288,7 +289,12 @@ require("lazy").setup({
             require("neotest-elixir")({}),
           }
         })
-      end
+      end,
+      mapping = {
+        ["<localleader>t"] = function ()
+          require("neotest").run.run()
+        end
+      }
     },
     { "tpope/vim-dispatch" },
     { "clojure-vim/vim-jack-in" },

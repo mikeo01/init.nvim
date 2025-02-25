@@ -5,6 +5,7 @@ return {
 		dependencies = {
 			"nvim-neotest/nvim-nio",
 			"nvim-neotest/neotest-jest",
+			"thenbe/neotest-playwright",
 			"jfpedroza/neotest-elixir",
 			"olimorris/neotest-phpunit",
 			"mfussenegger/nvim-dap",
@@ -13,6 +14,7 @@ return {
 			require("neotest").setup({
 				adapters = {
 					require("neotest-jest")({}),
+					require("neotest-playwright")({}),
 					require("neotest-phpunit")({}),
 					require("neotest-elixir")({}),
 				},

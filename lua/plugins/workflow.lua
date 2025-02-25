@@ -1,4 +1,5 @@
 return {
+	{ "tpope/vim-surround" },
 	{
 		"windwp/nvim-ts-autotag",
 		opts = {},

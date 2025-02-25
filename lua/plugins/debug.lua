@@ -18,10 +18,8 @@ return {
 				},
 			})
 		end,
-		mapping = {
-			["<localleader>t"] = function()
-				require("neotest").run.run()
-			end,
+		keys = {
+			{ "<localleader>t", "<CMD>lua require('neotest').run.run()<CR>", desc = "Run nearest test" },
 		},
 	},
 	{

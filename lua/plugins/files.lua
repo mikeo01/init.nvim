@@ -11,21 +11,23 @@ return {
 			{ "?", "<cmd>Telescope current_buffer_fuzzy_find<cr>" },
 			{ "M", "<cmd>Telescope keymaps<cr>" },
 		},
-		opts = {
-			defaults = {
-				layout_config = {
-					horizontal = {
-						preview_cutoff = 0,
-					},
-				},
+		config = function()
+		  require("telescope").setup({
+        defaults = {
+          layout_config = {
+            horizontal = {
+              preview_cutoff = 0,
+            },
+          },
 
-				mappings = {
-					i = {
-						["<esc>"] = require("telescope.actions").close,
-					},
-				},
-			},
-		},
+          mappings = {
+            i = {
+              ["<esc>"] = require("telescope.actions").close,
+            },
+          },
+        },
+      })
+    end
 	},
 	{
 		"nvim-neo-tree/neo-tree.nvim",

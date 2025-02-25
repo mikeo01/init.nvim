@@ -5,8 +5,6 @@ return {
 		dependencies = {
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig",
-			"nvimtools/none-ls.nvim",
-			"nvimtools/none-ls-extras.nvim",
 		},
 		config = function()
 			local lspconfig = require("lspconfig")

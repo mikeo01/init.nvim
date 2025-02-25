@@ -14,7 +14,7 @@ return {
 				"ts_ls",
 				"vuels",
 				"html",
-				"fennel_ls",
+				"fennel-ls",
 				"eslint",
 				"elixirls",
 				"dockerls",
@@ -79,7 +79,19 @@ return {
 	{
 		"williamboman/mason-lspconfig.nvim",
 		dependencies = { "williamboman/mason.nvim" },
-		opts = { automatic_installation = true },
+		opts = {
+		  ensure_installed = {
+		    "intelephense",
+		    "ts_ls",
+		    "eslint",
+		    "elixirls",
+		    "clojure_lsp",
+		    "cssls",
+		    "fennel_ls",
+		    "jsonls"
+      },
+		  automatic_installation = true
+		},
 	},
 	{
 		"hrsh7th/nvim-cmp",

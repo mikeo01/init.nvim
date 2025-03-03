@@ -7,8 +7,4 @@ return {
 		},
 	},
 	{ "nvim-lualine/lualine.nvim", opts = { theme = "solarized_light" } },
-	{
-		"akinsho/bufferline.nvim",
-		opts = {},
-	},
 }

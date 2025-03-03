@@ -1,8 +1,13 @@
 return {
-	{ "tpope/vim-fugitive", dependencies = {
-		"tpope/vim-dispatch",
-		"radenling/vim-dispatch-neovim",
-	} },
+	{
+	  "NeogitOrg/neogit",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "sindrets/diffview.nvim",
+      "nvim-telescope/telescope.nvim"
+    },
+    opts = {}
+  },
 	{
 		"lewis6991/gitsigns.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },

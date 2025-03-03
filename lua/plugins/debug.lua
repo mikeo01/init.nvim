@@ -4,6 +4,7 @@ return {
 		"nvim-neotest/neotest",
 		dependencies = {
 			"nvim-neotest/nvim-nio",
+			"nvim-lua/plenary.nvim",
 			"nvim-neotest/neotest-jest",
 			"thenbe/neotest-playwright",
 			"jfpedroza/neotest-elixir",

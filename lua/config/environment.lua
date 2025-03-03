@@ -32,4 +32,3 @@ vim.opt.background = "light"
 vim.opt.clipboard = "unnamedplus"
 vim.opt.termguicolors = true
 vim.opt.mouse = "a"
--- vim.cmd("silent! colorscheme NeoSolarized")

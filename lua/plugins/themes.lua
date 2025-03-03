@@ -1,3 +1,7 @@
 return {
-  { "shaunsingh/solarized.nvim", init = function () require("solarized").set() end }
+  {
+    "overcache/NeoSolarized",
+    lazy = false,
+    init = function () vim.cmd("colorscheme NeoSolarized") end
+  }
 }

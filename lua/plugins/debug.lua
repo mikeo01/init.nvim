@@ -5,20 +5,33 @@ return {
 		dependencies = {
 			"nvim-neotest/nvim-nio",
 			"nvim-lua/plenary.nvim",
+      "antoinemadec/FixCursorHold.nvim",
+
+			-- adapters
 			"nvim-neotest/neotest-jest",
-			"thenbe/neotest-playwright",
-			"jfpedroza/neotest-elixir",
 			"olimorris/neotest-phpunit",
-			"mfussenegger/nvim-dap",
 		},
 		config = function()
 			require("neotest").setup({
+			  log_level = "debug",
+
 				adapters = {
-					require("neotest-jest")({}),
-					require("neotest-playwright")({}),
-					require("neotest-phpunit")({}),
-					require("neotest-elixir")({}),
+					require("neotest-jest"),
+					require("neotest-phpunit"),
 				},
+
+				consumers = {
+				  require("neotest").status,
+				  require("neotest").diagnostic,
+        },
+
+        status = {
+          virtual_text = true
+        },
+
+        signs = {
+          enabled = true,
+        }
 			})
 		end,
 		keys = {

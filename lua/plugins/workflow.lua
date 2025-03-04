@@ -4,7 +4,14 @@ return {
 		"windwp/nvim-ts-autotag",
 		opts = {},
 	},
-
+  {
+    "julienvincent/nvim-paredit",
+    opts = {}
+  },
+  {
+    "ThePrimeagen/refactoring.nvim",
+    opts = {}
+  },
 	{
 		"folke/ts-comments.nvim",
 		opts = {

@@ -1,4 +1,11 @@
 return {
+  {
+    "echasnovski/mini.indentscope",
+    opts = {
+      symbol = "|",
+      options = { try_as_border = true }
+    }
+  },
 	{
 		"folke/noice.nvim",
 		dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" },

@@ -30,7 +30,7 @@ return {
 							"n",
 							"gd",
 							-- "<CMD>lua vim.lsp.buf.definition()<CR>",
-              ":tag <C-R><C-W><CR>",
+              "<C-]>",
 							{ noremap = true }
 						)
 						vim.api.nvim_buf_set_keymap(

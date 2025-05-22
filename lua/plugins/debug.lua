@@ -38,6 +38,7 @@ return {
 			{ "<localleader>t", "<CMD>lua require('neotest').run.run()<CR>", desc = "Run nearest test" },
 			{ "<localleader>f", "<CMD>lua require('neotest').run.run(vim.fn.expand('%'))<CR>", desc = "Run nearest test" },
 		},
+		lazy = false
 	},
 	{
 		"folke/trouble.nvim",

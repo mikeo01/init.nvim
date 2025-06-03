@@ -25,7 +25,7 @@ return {
 			for _, server in ipairs(servers) do
 				lspconfig[server].setup({
 					on_attach = function(client, bufnr)
-						vim.api.nvim_buf_set_neymap(
+						vim.api.nvim_buf_set_keymap(
 							bufnr,
 							"n",
 							"gd",

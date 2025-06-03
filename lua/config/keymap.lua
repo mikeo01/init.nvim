@@ -7,6 +7,7 @@ vim.keymap.set("n", "<Esc><Esc>", ":noh<CR>", { noremap = true, silent = true })
 -- Buffers
 vim.keymap.set("n", "<leader>fs", ":wa<CR>", { noremap = true, silent = true })
 vim.keymap.set("i", "<C-v>", "<C-o>p<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename)
 
 -- Text
 vim.keymap.set("n", "<C-a>", "Gvgg", { noremap = true, silent = true })

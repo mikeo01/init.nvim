@@ -20,5 +20,8 @@ return {
 				timeout_ms = 500,
 			},
 		},
+		keys = {
+			{ "<leader>f", "<CMD>lua require('conform').format()<CR>", desc = "Run nearest test" },
+		},
 	},
 }

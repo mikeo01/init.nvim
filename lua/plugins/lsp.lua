@@ -3,8 +3,8 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
-			"williamboman/mason.nvim",
-			"williamboman/mason-lspconfig",
+			"mason-org/mason.nvim",
+			"mason-org/mason-lspconfig.nvim",
 		},
 		config = function()
 			local lspconfig = require("lspconfig")
@@ -74,12 +74,12 @@ return {
 		end,
 	},
 	{
-		"williamboman/mason.nvim",
+		"mason-org/mason.nvim",
 		opts = {},
 	},
 	{
-		"williamboman/mason-lspconfig.nvim",
-		dependencies = { "williamboman/mason.nvim" },
+		"mason-org/mason-lspconfig.nvim",
+		dependencies = { "mason-org/mason.nvim", "neovim/nvim-lspconfig" },
 		opts = {
 		  ensure_installed = {
 		    "intelephense",
@@ -91,6 +91,7 @@ return {
 		    "fennel_ls",
 		    "jsonls"
       },
+      automatic_enable = true,
 		  automatic_installation = true
 		},
 	},

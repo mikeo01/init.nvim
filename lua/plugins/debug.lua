@@ -5,7 +5,7 @@ return {
 		dependencies = {
 			"nvim-neotest/nvim-nio",
 			"nvim-lua/plenary.nvim",
-      "antoinemadec/FixCursorHold.nvim",
+			"antoinemadec/FixCursorHold.nvim",
 
 			-- adapters
 			"nvim-neotest/neotest-jest",
@@ -13,7 +13,7 @@ return {
 		},
 		config = function()
 			require("neotest").setup({
-			  log_level = "debug",
+				log_level = "debug",
 
 				adapters = {
 					require("neotest-jest"),
@@ -21,25 +21,34 @@ return {
 				},
 
 				consumers = {
-				  require("neotest").status,
-				  require("neotest").diagnostic,
-        },
+					require("neotest").status,
+					require("neotest").diagnostic,
+				},
 
-        status = {
-          virtual_text = true
-        },
+				status = {
+					virtual_text = true,
+				},
 
-        signs = {
-          enabled = true,
-        }
+				signs = {
+					enabled = true,
+				},
 			})
 		end,
 		keys = {
 			{ "<localleader>t", "<CMD>lua require('neotest').run.run()<CR>", desc = "Run nearest test" },
-			{ "<localleader>f", "<CMD>lua require('neotest').run.run(vim.fn.expand('%'))<CR>", desc = "Run nearest test" },
-			{ "<localleader>w", "<CMD>lua require('neotest').run.run({jestCommand = 'jest --watch'})<CR>", desc = "Run nearest test" },
+			{
+				"<localleader>f",
+				"<CMD>lua require('neotest').run.run(vim.fn.expand('%'))<CR>",
+				desc = "Run nearest test",
+			},
+			{
+				"<localleader>w",
+				"<CMD>lua require('neotest').run.run({jestCommand = 'jest --watch'})<CR>",
+				desc = "Run nearest test",
+			},
+			{ "BS", "<CMD>Neotest summary<CR>" },
 		},
-		lazy = false
+		lazy = false,
 	},
 	{
 		"folke/trouble.nvim",

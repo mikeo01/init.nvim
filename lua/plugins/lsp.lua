@@ -11,6 +11,7 @@ return {
 
 			local servers = {
 				"intelephense",
+				"laravel_ls",
 				"ts_ls",
 				"vuels",
 				"html",
@@ -30,7 +31,7 @@ return {
 							"n",
 							"gd",
 							-- "<CMD>lua vim.lsp.buf.definition()<CR>",
-              "<C-]>",
+							"<C-]>",
 							{ noremap = true }
 						)
 						vim.api.nvim_buf_set_keymap(
@@ -81,18 +82,18 @@ return {
 		"mason-org/mason-lspconfig.nvim",
 		dependencies = { "mason-org/mason.nvim", "neovim/nvim-lspconfig" },
 		opts = {
-		  ensure_installed = {
-		    "intelephense",
-		    "ts_ls",
-		    "eslint",
-		    "elixirls",
-		    "clojure_lsp",
-		    "cssls",
-		    "fennel_ls",
-		    "jsonls"
-      },
-      automatic_enable = true,
-		  automatic_installation = true
+			ensure_installed = {
+				"intelephense",
+				"ts_ls",
+				"eslint",
+				"elixirls",
+				"clojure_lsp",
+				"cssls",
+				"fennel_ls",
+				"jsonls",
+			},
+			automatic_enable = true,
+			automatic_installation = true,
 		},
 	},
 	{

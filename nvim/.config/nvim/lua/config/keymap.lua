@@ -32,3 +32,6 @@ vim.keymap.set("n", "<leader>wd", ":q<CR>", { noremap = true, silent = true })
 -- Terminal
 vim.keymap.set("n", "<leader>ot", ":term<CR>", { noremap = true, silent = true })
 vim.keymap.set("t", "<localleader>c", "<C-\\><C-n><CR>", { noremap = true, silent = true })
+
+-- Vista
+vim.keymap.set("n", "<localleader>v", ":Vista<CR>", { noremap = true, silent = true })

@@ -43,4 +43,11 @@ return {
 		"johmsalas/text-case.nvim",
 		opts = {},
 	},
+  {
+    "linrongbin16/gentags.nvim",
+    opts = {}
+  },
+  {
+    "liuchengxu/vista.vim", 
+  }
 }

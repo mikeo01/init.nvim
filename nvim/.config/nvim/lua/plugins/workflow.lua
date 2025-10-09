@@ -53,6 +53,10 @@ return {
 	{
 		"stevearc/overseer.nvim",
 		opts = {},
+		keys = {
+			{ "TO", "<cmd>OverseerOpen<cr>" },
+			{ "TR", "<cmd>OverseerRun<cr>" },
+		},
 	},
 	{
 		"coffebar/neovim-project",

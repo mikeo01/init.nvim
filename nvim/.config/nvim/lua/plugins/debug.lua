@@ -54,4 +54,11 @@ return {
 		"folke/trouble.nvim",
 		opts = {},
 	},
+	{
+		"rcarriga/nvim-dap-ui",
+		dependencies = {
+			"mfussenegger/nvim-dap",
+			"nvim-neotest/nvim-nio",
+		},
+	},
 }

@@ -81,5 +81,9 @@ return {
 		},
 		lazy = false,
 		priority = 100,
+		keys = {
+			{ "<C-p>", "<cmd>NeovimProjectDiscover<cr>" },
+			{ "P", "<cmd>NeovimProjectLoadRecent<cr>" },
+		},
 	},
 }

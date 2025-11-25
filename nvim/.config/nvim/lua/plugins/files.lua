@@ -3,7 +3,7 @@ return {
 		"nvim-telescope/telescope.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },
 		keys = {
-			{ "<leader>p", "<cmd>Telescope git_files<cr>" },
+			{ "<leader><leader>", "<cmd>Telescope git_files<cr>" },
 			{ "<leader>.", "<cmd>Telescope find_files<cr>" },
 			{ "<leader>b", "<cmd>Telescope buffers<cr>" },
 			{ "<leader>g", "<cmd>Telescope live_grep<cr>" },
@@ -12,22 +12,22 @@ return {
 			{ "M", "<cmd>Telescope keymaps<cr>" },
 		},
 		config = function()
-		  require("telescope").setup({
-        defaults = {
-          layout_config = {
-            horizontal = {
-              preview_cutoff = 0,
-            },
-          },
+			require("telescope").setup({
+				defaults = {
+					layout_config = {
+						horizontal = {
+							preview_cutoff = 0,
+						},
+					},
 
-          mappings = {
-            i = {
-              ["<esc>"] = require("telescope.actions").close,
-            },
-          },
-        },
-      })
-    end
+					mappings = {
+						i = {
+							["<esc>"] = require("telescope.actions").close,
+						},
+					},
+				},
+			})
+		end,
 	},
 	{
 		"nvim-neo-tree/neo-tree.nvim",

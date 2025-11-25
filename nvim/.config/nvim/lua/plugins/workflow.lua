@@ -43,10 +43,10 @@ return {
 		"johmsalas/text-case.nvim",
 		opts = {},
 	},
-	{
-		"linrongbin16/gentags.nvim",
-		opts = {},
-	},
+	-- {
+	-- 	"linrongbin16/gentags.nvim",
+	-- 	opts = {},
+	-- },
 	{
 		"liuchengxu/vista.vim",
 	},
@@ -86,7 +86,7 @@ return {
 		lazy = false,
 		priority = 100,
 		keys = {
-			{ "<C-p>", "<cmd>NeovimProjectDiscover<cr>" },
+			{ "<leader>pp", "<cmd>NeovimProjectDiscover<cr>" },
 			{ "P", "<cmd>NeovimProjectLoadRecent<cr>" },
 		},
 	},

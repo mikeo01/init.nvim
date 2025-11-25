@@ -86,8 +86,8 @@ return {
 		lazy = false,
 		priority = 100,
 		keys = {
-			{ "<leader>pp", "<cmd>NeovimProjectDiscover<cr>" },
-			{ "P", "<cmd>NeovimProjectLoadRecent<cr>" },
+			{ "<leader>pp", "<cmd>NeovimProjectDiscover history<cr>" },
+			{ "<leader>pr", "<cmd>NeovimProjectLoadRecent<cr>" },
 		},
 	},
 }

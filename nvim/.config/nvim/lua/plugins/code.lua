@@ -9,7 +9,7 @@ return {
 				json = { "fixjson" },
 				typescript = { "eslint_d" },
 				javascript = { "eslint_d" },
-				php = { "php_cs_fixer", "phpinsights" },
+				php = { "php_cs_fixer" },
 				elixir = { "mix" },
 				lua = { "stylua" },
 				["*"] = { "codespell" },
@@ -21,7 +21,7 @@ return {
 			},
 		},
 		keys = {
-			{ "<leader>f", "<CMD>lua require('conform').format()<CR>", desc = "Run nearest test" },
+			{ "<leader>f", "<CMD>lua require('conform').format()<CR>", desc = "Run format" },
 		},
-	},
+  }
 }

@@ -7,7 +7,7 @@ return {
 			"mason-org/mason-lspconfig.nvim",
 		},
 		config = function()
-			local lspconfig = require("lspconfig")
+			local lspconfig = vim.lsp.config
 
 			local servers = {
 				"intelephense",
@@ -26,49 +26,14 @@ return {
 			for _, server in ipairs(servers) do
 				lspconfig[server].setup({
 					on_attach = function(client, bufnr)
-						vim.api.nvim_buf_set_keymap(
-							bufnr,
-							"n",
-							"gd",
-							-- "<CMD>lua vim.lsp.buf.definition()<CR>",
-							"<C-]>",
-							{ noremap = true }
-						)
-						vim.api.nvim_buf_set_keymap(
-							bufnr,
-							"n",
-							"K",
-							"<CMD>lua vim.lsp.buf.hover()<CR>",
-							{ noremap = true }
-						)
-						vim.api.nvim_buf_set_keymap(
-							bufnr,
-							"n",
-							"gr",
-							"<CMD>lua vim.lsp.buf.references()<CR>",
-							{ noremap = true }
-						)
-						vim.api.nvim_buf_set_keymap(
-							bufnr,
-							"n",
-							"<space>d",
-							"<CMD>lua vim.diagnostic.open_float()<CR>",
-							{ noremap = true }
-						)
-						vim.api.nvim_buf_set_keymap(
-							bufnr,
-							"n",
-							"[d",
-							"<CMD>lua vim.diagnostic.goto_prev()<CR>",
-							{ noremap = true }
-						)
-						vim.api.nvim_buf_set_keymap(
-							bufnr,
-							"n",
-							"]d",
-							"<CMD>lua vim.diagnostic.goto_next()<CR>",
-							{ noremap = true }
-						)
+					  local opts = { noremap = true }
+						vim.api.nvim_buf_set_keymap(bufnr, "n",	"gd", "<CMD>lua vim.lsp.buf.definition()<CR>", opts)
+						vim.api.nvim_buf_set_keymap(bufnr, "n", "gD",	"<CMD>lua vim.lsp.buf.declaration()<CR>", opts)
+						vim.api.nvim_buf_set_keymap(bufnr, "n", "K", "<CMD>lua vim.lsp.buf.hover()<CR>", opts)
+						vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", "<CMD>lua vim.lsp.buf.references()<CR>", opts)
+						vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>d", "<CMD>lua vim.diagnostic.open_float()<CR>", opts)
+						vim.api.nvim_buf_set_keymap(bufnr, "n", "[d", "<CMD>lua vim.diagnostic.goto_prev()<CR>", opts)
+						vim.api.nvim_buf_set_keymap(bufnr, "n", "]d", "<CMD>lua vim.diagnostic.goto_next()<CR>", opts)
 					end,
 				})
 			end
@@ -96,6 +61,10 @@ return {
 			automatic_installation = true,
 		},
 	},
+  {
+    "hinell/lsp-timeout.nvim",
+    dependencies = { "neovim/nvim-lspconfig" }
+  },
 	{
 		"hrsh7th/nvim-cmp",
 		dependencies = { "hrsh7th/cmp-nvim-lsp", "hrsh7th/cmp-buffer", "hrsh7th/cmp-path" },

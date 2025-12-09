@@ -13,6 +13,9 @@ vim.g.instant_markdown_mermaid = 1
 vim.g["conjure#filetype#fennel"] = "conjure.client.fennel.stdio"
 vim.g["conjure#client#fennel#stdio#command"] = "love ."
 
+-- Augment AI
+vim.g["augment_workspace_folders"] = { "~/projects" }
+
 -- Editor Options
 vim.opt.updatetime = 1000
 vim.opt.tabstop = 2

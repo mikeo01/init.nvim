@@ -8,10 +8,13 @@ return {
 		"julienvincent/nvim-paredit",
 		opts = {},
 	},
-	{
-		"ThePrimeagen/refactoring.nvim",
-		opts = {},
-	},
+  {
+    "hiphish/rainbow-delimiters.nvim"
+  },
+  {
+    "windwp/nvim-autopairs",
+    opts = {}
+  },
 	{
 		"folke/ts-comments.nvim",
 		opts = {
@@ -34,19 +37,16 @@ return {
 		opts = {},
 	},
 	{
-		"ggandor/leap.nvim",
-		config = function()
-			require("leap").create_default_mappings()
-		end,
+    "ggandor/leap.nvim",
+    opts = {},
+		keys = {
+      { "s", "<Plug>(leap)" },
+    }
 	},
 	{
 		"johmsalas/text-case.nvim",
 		opts = {},
 	},
-	-- {
-	-- 	"linrongbin16/gentags.nvim",
-	-- 	opts = {},
-	-- },
 	{
 		"liuchengxu/vista.vim",
 	},
@@ -89,5 +89,6 @@ return {
 			{ "<leader>pp", "<cmd>NeovimProjectDiscover history<cr>" },
 			{ "<leader>pr", "<cmd>NeovimProjectLoadRecent<cr>" },
 		},
-	},
+  },
+  -- { 'augmentcode/augment.vim' },
 }

@@ -13,6 +13,7 @@ return {
 				"intelephense",
 				"laravel_ls",
 				"ts_ls",
+				"eslint",
 				"vuels",
 				"html",
 				"fennel-ls",
@@ -33,7 +34,13 @@ return {
 						vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", "<CMD>lua vim.lsp.buf.references()<CR>", opts)
 						vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>d", "<CMD>lua vim.diagnostic.open_float()<CR>", opts)
 						vim.api.nvim_buf_set_keymap(bufnr, "n", "[d", "<CMD>lua vim.diagnostic.goto_prev()<CR>", opts)
-						vim.api.nvim_buf_set_keymap(bufnr, "n", "]d", "<CMD>lua vim.diagnostic.goto_next()<CR>", opts)
+            vim.api.nvim_buf_set_keymap(bufnr, "n", "]d", "<CMD>lua vim.diagnostic.goto_next()<CR>", opts)
+            
+            vim.diagnostic.config({
+              virtual_text = true,
+              signs = true,
+              underline = true,
+            })
 					end,
 				})
 			end

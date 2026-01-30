@@ -6,43 +6,50 @@ return {
 			"mason-org/mason.nvim",
 			"mason-org/mason-lspconfig.nvim",
 		},
+		opts = {
+      inlay_hints = { enabled = true },
+    },
 		config = function()
 			local lspconfig = vim.lsp.config
 
 			local servers = {
 				"intelephense",
-				"laravel_ls",
 				"ts_ls",
 				"eslint",
-				"vuels",
 				"html",
 				"fennel-ls",
-				"eslint",
-				"elixirls",
-				"dockerls",
+				"clojure_lsp",
 				"cssls",
-				"vimls",
+				"jsonls",
 			}
 
 			for _, server in ipairs(servers) do
-				lspconfig[server].setup({
-					on_attach = function(client, bufnr)
-					  local opts = { noremap = true }
-						vim.api.nvim_buf_set_keymap(bufnr, "n",	"gd", "<CMD>lua vim.lsp.buf.definition()<CR>", opts)
-						vim.api.nvim_buf_set_keymap(bufnr, "n", "gD",	"<CMD>lua vim.lsp.buf.declaration()<CR>", opts)
-						vim.api.nvim_buf_set_keymap(bufnr, "n", "K", "<CMD>lua vim.lsp.buf.hover()<CR>", opts)
-						vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", "<CMD>lua vim.lsp.buf.references()<CR>", opts)
-						vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>d", "<CMD>lua vim.diagnostic.open_float()<CR>", opts)
-						vim.api.nvim_buf_set_keymap(bufnr, "n", "[d", "<CMD>lua vim.diagnostic.goto_prev()<CR>", opts)
-            vim.api.nvim_buf_set_keymap(bufnr, "n", "]d", "<CMD>lua vim.diagnostic.goto_next()<CR>", opts)
-            
-            vim.diagnostic.config({
-              virtual_text = true,
-              signs = true,
-              underline = true,
+        local ok, err = pcall(function()
+            lspconfig[server].setup({
+              on_attach = function(client, bufnr)
+                local opts = { noremap = true }
+                vim.api.nvim_buf_set_keymap(bufnr, "n",	"gd", "<CMD>lua vim.lsp.buf.definition()<CR>", opts)
+                vim.api.nvim_buf_set_keymap(bufnr, "n", "gD",	"<CMD>lua vim.lsp.buf.declaration()<CR>", opts)
+                vim.api.nvim_buf_set_keymap(bufnr, "n", "K", "<CMD>lua vim.lsp.buf.hover()<CR>", opts)
+                vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", "<CMD>lua vim.lsp.buf.references()<CR>", opts)
+                vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>d", "<CMD>lua vim.diagnostic.open_float()<CR>", opts)
+                vim.api.nvim_buf_set_keymap(bufnr, "n", "[d", "<CMD>lua vim.diagnostic.goto_prev()<CR>", opts)
+                vim.api.nvim_buf_set_keymap(bufnr, "n", "]d", "<CMD>lua vim.diagnostic.goto_next()<CR>", opts)
+
+                vim.lsp.inlay_hint(bufnr, true)
+                
+                vim.diagnostic.config({
+                  virtual_text = true,
+                  signs = true,
+                  underline = true,
+                })
+              end,
             })
-					end,
-				})
+        end)
+
+        if not ok then
+            error("Setting up LSP for the following server failed: " .. server)
+        end
 			end
 		end,
 	},
@@ -58,7 +65,6 @@ return {
 				"intelephense",
 				"ts_ls",
 				"eslint",
-				"elixirls",
 				"clojure_lsp",
 				"cssls",
 				"fennel_ls",

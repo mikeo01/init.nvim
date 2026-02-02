@@ -48,10 +48,6 @@ return {
               end,
             })
         end)
-
-        if not ok then
-            error("Setting up LSP for the following server failed: " .. server)
-        end
 			end
 		end,
 	},

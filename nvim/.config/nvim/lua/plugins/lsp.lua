@@ -36,7 +36,9 @@ return {
                 vim.api.nvim_buf_set_keymap(bufnr, "n", "[d", "<CMD>lua vim.diagnostic.goto_prev()<CR>", opts)
                 vim.api.nvim_buf_set_keymap(bufnr, "n", "]d", "<CMD>lua vim.diagnostic.goto_next()<CR>", opts)
 
-                vim.lsp.inlay_hint(bufnr, true)
+                if client.server_capabilities.inlayHintProvider then
+                    vim.lsp.inlay_hint(bufnr, true)
+                end
                 
                 vim.diagnostic.config({
                   virtual_text = true,
@@ -46,10 +48,6 @@ return {
               end,
             })
         end)
-
-        if not ok then
-            error("Setting up LSP for the following server failed: " .. server)
-        end
 			end
 		end,
 	},

@@ -4,7 +4,12 @@ if status is-interactive
     set -gx PATH $PATH ~/google-cloud-sdk/bin
 
     if not set -q TMUX
-         tmux
+      # Attach to "main" if it exists, else create it.
+      if tmux ls >/dev/null 2>&1
+          tmux attach -t main 2>/dev/null || tmux attach
+      else
+          tmux new -s main
+      end
     end
 end
 
